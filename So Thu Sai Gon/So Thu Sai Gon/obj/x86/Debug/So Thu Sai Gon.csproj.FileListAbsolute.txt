@@ -1,0 +1,8 @@
+E:\github\Sở thú sài gòn\so-thu-sai-gon-htlna\So Thu Sai Gon\So Thu Sai Gon\bin\Debug\So Thu Sai Gon.exe
+E:\github\Sở thú sài gòn\so-thu-sai-gon-htlna\So Thu Sai Gon\So Thu Sai Gon\bin\Debug\So Thu Sai Gon.pdb
+E:\github\Sở thú sài gòn\so-thu-sai-gon-htlna\So Thu Sai Gon\So Thu Sai Gon\obj\x86\Debug\So_Thu_Sai_Gon.Form1.resources
+E:\github\Sở thú sài gòn\so-thu-sai-gon-htlna\So Thu Sai Gon\So Thu Sai Gon\obj\x86\Debug\So_Thu_Sai_Gon.Properties.Resources.resources
+E:\github\Sở thú sài gòn\so-thu-sai-gon-htlna\So Thu Sai Gon\So Thu Sai Gon\obj\x86\Debug\So Thu Sai Gon.csproj.GenerateResource.Cache
+E:\github\Sở thú sài gòn\so-thu-sai-gon-htlna\So Thu Sai Gon\So Thu Sai Gon\obj\x86\Debug\So Thu Sai Gon.exe
+E:\github\Sở thú sài gòn\so-thu-sai-gon-htlna\So Thu Sai Gon\So Thu Sai Gon\obj\x86\Debug\So Thu Sai Gon.pdb
+E:\github\Sở thú sài gòn\so-thu-sai-gon-htlna\So Thu Sai Gon\So Thu Sai Gon\obj\x86\Debug\So Thu Sai Gon.csprojResolveAssemblyReference.cache
