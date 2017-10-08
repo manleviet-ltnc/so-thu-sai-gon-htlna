@@ -77,7 +77,7 @@ namespace So_Thu_Sai_Gon
         }
         private void mnuClose_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void mnuLoad_Click(object sender, EventArgs e)
