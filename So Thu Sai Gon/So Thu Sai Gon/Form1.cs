@@ -41,18 +41,39 @@ namespace So_Thu_Sai_Gon
         {
             if (e.Data.GetDataPresent(DataFormats.Text))
             {
-                ListBox lb = (ListBox)sender;
-                lb.Items.Add(e.Data.GetData(DataFormats.Text));
+                bool test = false;
+                for (int i = 0; i < lstDanhsach.Items.Count; i++)
+                {
+                    string st = lstDanhsach.Items[i].ToString();
+                    string data = e.Data.GetData(DataFormats.Text).ToString();
+                    if (data == st)
+                        test = true;
+                }
+                if (test == false)
+                {
+                    int newIndex = lstDanhsach.IndexFromPoint(lstDanhsach.PointToClient(new Point(e.X, e.Y)));
+                    lstDanhsach.Items.Remove(e.Data.GetData(DataFormats.Text));
+                    if (newIndex != -1)
+                        lstDanhsach.Items.Insert(newIndex, e.Data.GetData(DataFormats.Text));
+                    else
+                    {
+                        ListBox lb = (ListBox)sender;
+                        lb.Items.Add(e.Data.GetData(DataFormats.Text));
+                    }
+
+                }
             }
         }
+        bool issave = false;
         private void Save(object sender, EventArgs e)
-        {
+        { 
             // Mo tap tin
             StreamWriter write = new StreamWriter("danhsachthu.txt");
             if (write == null) return;
             foreach (var item in lstDanhsach.Items)
                 write.WriteLine(item.ToString());
             write.Close();
+            issave = true;
         }
         private void mnuClose_Click(object sender, EventArgs e)
         {
@@ -99,6 +120,33 @@ namespace So_Thu_Sai_Gon
         {
             timer1.Enabled = true;
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            lstDanhsach.Items.Remove(lstDanhsach.SelectedItem);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (issave == false)
+            {
+                DialogResult kq = MessageBox.Show("Ban co muon luu danh sach?", "THONG BAO", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                if (kq == DialogResult.Yes)
+                {
+                    Save(sender, e);
+                    e.Cancel = false;
+                }
+                else if (kq == DialogResult.No)
+                    e.Cancel = false;
+                else
+                    e.Cancel = true;
+            }
+            else
+                mnuClose_Click(sender, e);
+
+        }
+
+       
     }
 }
 
